@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>공격 성장형 90/10 포트폴리오</title>
+  <title>성장형 441 포트폴리오</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
@@ -33,7 +32,6 @@
       transform: translateY(-5px);
       background: linear-gradient(to right, rgba(30,41,59,0.9), rgba(30,41,59,0.7));
     }
-    /* Summary card styles */
     .summary-card {
       background: #1e293b;
       border-radius: 0.75rem;
@@ -44,53 +42,46 @@
   </style>
 </head>
 <body class="p-4">
-  <!-- HEADER -->
   <header class="text-center mb-8">
-    <h1 class="text-4xl font-bold mb-2 gradient-text">공격 성장형 90/10 전략</h1>
-    <p class="text-lg text-gray-300">장기적으로 시장을 압도하는 완벽한 설계</p>
-    <p class="text-sm mt-2 text-gray-400">작성자: 이찬 | 기준일: 2025-07-07</p>
+    <h1 class="text-4xl font-bold mb-2 gradient-text">성장형 441 포트폴리오</h1>
+    <p class="text-lg text-gray-300">배당 안정성과 성장 잠재력을 겸비한 3축 전략</p>
+    <p class="text-sm mt-2 text-gray-400">작성자: 이찬 | 기준일: 2025-08-05</p>
   </header>
 
-  <!-- 포트폴리오 비중 차트 -->
   <section class="mb-8">
     <h2 class="text-2xl font-semibold mb-4">포트폴리오 비중</h2>
     <canvas id="portfolioPie" class="mx-auto" style="max-width:400px;"></canvas>
   </section>
 
-  <!-- 포트폴리오 요약: 모바일 카드 / PC 테이블 -->
   <section class="mb-10">
     <h2 class="text-2xl font-semibold mb-4">포트폴리오 요약</h2>
-    <!-- 모바일: 카드 그리드 -->
     <div class="grid gap-4 sm:grid-cols-1 md:hidden">
-      <!-- VTI -->
       <div class="summary-card">
         <div class="flex justify-between items-center mb-2">
-          <span class="font-semibold text-lg">VTI</span>
-          <span class="text-green-400 font-bold">75%</span>
+          <span class="font-semibold text-lg">JEPI</span>
+          <span class="text-green-400 font-bold">45%</span>
         </div>
-        <p class="text-gray-300 text-sm">압도적 성장 코어</p>
-        <p class="text-gray-400 text-xs">Vanguard Total Stock Market ETF</p>
+        <p class="text-gray-300 text-sm">수비수 & 현금창출</p>
+        <p class="text-gray-400 text-xs">JPMorgan Equity Premium Income ETF</p>
       </div>
-      <!-- BIL -->
       <div class="summary-card">
         <div class="flex justify-between items-center mb-2">
-          <span class="font-semibold text-lg">BIL</span>
-          <span class="text-green-400 font-bold">10%</span>
+          <span class="font-semibold text-lg">IVV</span>
+          <span class="text-green-400 font-bold">40%</span>
         </div>
-        <p class="text-gray-300 text-sm">최후의 보루</p>
-        <p class="text-gray-400 text-xs">SPDR Bloomberg 1-3 Month T-Bill ETF</p>
+        <p class="text-gray-300 text-sm">성장 엔진</p>
+        <p class="text-gray-400 text-xs">iShares Core S&P 500 ETF</p>
       </div>
-      <!-- SMH -->
       <div class="summary-card">
         <div class="flex justify-between items-center mb-2">
           <span class="font-semibold text-lg">SMH</span>
           <span class="text-green-400 font-bold">15%</span>
         </div>
-        <p class="text-gray-300 text-sm">전략적 알파 추구</p>
+        <p class="text-gray-300 text-sm">전략적 공격수</p>
         <p class="text-gray-400 text-xs">VanEck Semiconductor ETF</p>
       </div>
     </div>
-    <!-- PC: 표 -->
+
     <div class="hidden md:block overflow-x-auto">
       <table class="w-full text-sm text-left text-gray-200">
         <thead class="bg-gray-800">
@@ -103,19 +94,19 @@
         </thead>
         <tbody>
           <tr class="border-b border-gray-700">
-            <td class="p-3">압도적 성장 코어</td>
-            <td class="p-3 font-bold text-white">VTI</td>
-            <td class="p-3">Vanguard Total Stock Market ETF</td>
-            <td class="p-3 font-semibold">75%</td>
+            <td class="p-3">수비수 & 현금창출</td>
+            <td class="p-3 font-bold text-white">JEPI</td>
+            <td class="p-3">JPMorgan Equity Premium Income ETF</td>
+            <td class="p-3 font-semibold">45%</td>
           </tr>
           <tr class="border-b border-gray-700">
-            <td class="p-3">최후의 보루</td>
-            <td class="p-3 font-bold text-white">BIL</td>
-            <td class="p-3">SPDR Bloomberg 1-3 Month T-Bill ETF</td>
-            <td class="p-3 font-semibold">10%</td>
+            <td class="p-3">성장 엔진</td>
+            <td class="p-3 font-bold text-white">IVV</td>
+            <td class="p-3">iShares Core S&P 500 ETF</td>
+            <td class="p-3 font-semibold">40%</td>
           </tr>
           <tr>
-            <td class="p-3">전략적 알파 추구</td>
+            <td class="p-3">전략적 공격수</td>
             <td class="p-3 font-bold text-white">SMH</td>
             <td class="p-3">VanEck Semiconductor ETF</td>
             <td class="p-3 font-semibold">15%</td>
@@ -127,63 +118,62 @@
 
   <section class="space-y-6">
     <div class="card">
-      <h3 class="text-xl font-semibold mb-2">VTI - Vanguard Total Stock Market ETF</h3>
-      <p class="text-gray-300">■ <strong>종목 역할:</strong> 압도적 성장 코어 (75%).<br>
-      ■ <strong>종목 설명:</strong> 미국 주식의 4,000개 기업 모두에 투자하는, 미국 경제 전체를 대표하는 ETF입니다.<br>
-      ■ <strong>투자 이유:</strong> 우리는 특정 대기업(S&P 500)에만 베팅하는 것을 넘어, 지금은 작지만 미래에 시장을 지배할 '제2의 엔비디아' 가 될 가능성을 가진 모든 기업에 투자합니다.</p>
+      <h3 class="text-xl font-semibold mb-2">JEPI - JPMorgan Equity Premium Income ETF</h3>
+      <p class="text-gray-300">■ <strong>역할:</strong> 수비수 & 현금창출 (45%)<br>
+      ■ <strong>설명:</strong> 커버드콜 전략을 활용하여 시장의 급격한 변동을 방어하고, 월배당을 통해 꾸준한 현금흐름을 제공합니다.<br>
+      ■ <strong>투자 이유:</strong> 하락장에서 자산을 지키고, 횡보장에서도 배당 수익을 꾸준히 얻을 수 있어, 포트폴리오의 '현금 흐름 방어선' 역할을 수행합니다.</p>
     </div>
     <div class="card">
-      <h3 class="text-xl font-semibold mb-2">BIL - SPDR Bloomberg 1-3 Month T-Bill ETF</h3>
-      <p class="text-gray-300">■ <strong>종목 역할:</strong> 최후의 보루 (10%)<br>
-      ■ <strong>종목 설명:</strong> 만기 3개월 미만의 초단기 미국 국채에 투자하는, 사실상 '달러 현금'에 가장 가까운 ETF입니다.<br>
-      ■ <strong>투자 이유:</strong> 시장이 대폭락할 때도 막아주는 안전판입니다. 폭락장에서 헐값에 위대한 자산을 사들일 공격용 실탄이며, 포트폴리오의 생명줄 역할을 합니다.</p>
+      <h3 class="text-xl font-semibold mb-2">IVV - iShares Core S&P 500 ETF</h3>
+      <p class="text-gray-300">■ <strong>역할:</strong> 성장 엔진 (40%)<br>
+      ■ <strong>설명:</strong> 미국을 대표하는 500대 대형 우량주로 구성된 S&P 500 지수를 그대로 추종하는 ETF입니다.<br>
+      ■ <strong>투자 이유:</strong> 강력한 경제 기반 위에 세워진 대형주들에 투자함으로써, 장기적으로 시장 전체 성장의 핵심 동력을 확보합니다.</p>
     </div>
     <div class="card">
       <h3 class="text-xl font-semibold mb-2">SMH - VanEck Semiconductor ETF</h3>
-      <p class="text-gray-300">■ <strong>종목 역할:</strong> 전략적 알파 추구 (15%)<br>
-      ■ <strong>종목 설명:</strong> 엔비디아, TSMC, ASML 등 전 세계 반도체 산업의 먹이 사슬 최상단에 있는 핵심 기업들에 집중적으로 투자하는 ETF입니다.<br>
-      ■ <strong>투자 이유:</strong> 3배 레버리지(SOXL)의 도박을 하는 대신, 실제 산업을 지배하는 위대한 기업들의 연합체에 투자하여 '검증된 성장'에 베팅합니다.</p>
+      <p class="text-gray-300">■ <strong>역할:</strong> 전략적 공격 (15%)<br>
+      ■ <strong>설명:</strong> NVIDIA, TSMC, ASML 등 글로벌 반도체 핵심 기업들에 집중 투자하는 ETF입니다.<br>
+      ■ <strong>투자 이유:</strong> AI, 데이터센터, 전장산업 등 미래 산업을 구성하는 핵심 인프라인 반도체에 선제적으로 투자함으로써, 고성장 시대의 공격 자산으로 포트폴리오의 수익률을 끌어올립니다.</p>
     </div>
   </section>
 
   <section class="mt-10">
     <h2 class="text-2xl font-semibold mb-4">장기 운용 계획</h2>
     <ul class="list-disc list-inside space-y-2 text-gray-300">
-      <li>총 자산의 10%를 즉시 BIL에 투입해 '최후의 보루'를 완성</li>
-      <li>나머지 90%는 3개월간 나누어 기계적으로 분할 매수</li>
-      <li>완성 후에는 시장의 단기 변동에 흔들리지 않고, 1년에 한 번만 비중 조정(리밸런싱)</li>
+      <li>비중에 맞춰 초기 분할 매수 또는 일괄 매수</li>
+      <li>연 1회 리밸런싱만 실시하며 장기보유 전략 유지</li>
+      <li>배당은 재투자 또는 생활비 활용 목적에 따라 선택</li>
     </ul>
   </section>
 
-<script>
-  const ctx = document.getElementById('portfolioPie').getContext('2d');
-  new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['VTI 75%', 'BIL 10%', 'SMH 15%'],
-      datasets: [{
-        label: 'Portfolio Allocation',
-        data: [75, 10, 15],
-        backgroundColor: ['#60a5fa', '#34d399', '#f87171'],
-        hoverOffset: 8
-      }]
-    },
-    options: {
-      animation: {
-        animateRotate: true,
-        duration: 1500,
-        easing: 'easeOutBounce'
+  <script>
+    const ctx = document.getElementById('portfolioPie').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['JEPI 45%', 'IVV 40%', 'SMH 15%'],
+        datasets: [{
+          label: 'Portfolio Allocation',
+          data: [45, 40, 15],
+          backgroundColor: ['#60a5fa', '#34d399', '#f87171'],
+          hoverOffset: 8
+        }]
       },
-      plugins: {
-        legend: {
-          labels: {
-            color: '#f9fafb'
+      options: {
+        animation: {
+          animateRotate: true,
+          duration: 1500,
+          easing: 'easeOutBounce'
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#f9fafb'
+            }
           }
         }
       }
-    }
-  });
-</script>
+    });
+  </script>
 </body>
 </html>
-
